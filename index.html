@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mycss_web.css">
+  <link rel="stylesheet" href="mycss_tablet.css">
   <title> CUS1172 Lab1 </title>
+  <style>
+
+    .heading1 {
+      color:yellow;
+      text-align:center;
+      font-size:2em;
+      font-family: courier;
+      font-style: italic;
+      border: solid;
+    }
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
 </head>
+
 <body>
-<h1> CUS1172 Lab 1: Milestone 1</h1>
-<h3><span style="color:blue">Navigation Menu</h3>
-<nav>
+
+<h1 class="heading1"> CUS1172 Lab: Milestone 1 & 2</h1>
+<div class="dropdown">
+<span><h3 style="color:black;text-align:left">Navigation Menu</h3></span>
+<div class="dropdown-content">
+  <p>This is the navigation menu! Click on a title to be brought to that section!</p>
+  </div>
+  </div>
+<nav id="nav_menu">
   <ul>
     <li> <a href="#profile_info"> Basic Profile Information </a></li>
     <li> <a href="#profile_pic"> Profile Picture </a></li>
@@ -22,7 +62,7 @@
 </nav>
 
 <div id="profile_info">
-<h2> Basic Profile Information </h2>
+<h2 class="heading2"> Basic Profile Information </h2>
 <ul>
   <li>Name: Amanda K. Capobianco</li>
   <li>Major: Computer Science with Concentration in Cyber Security</li>
@@ -30,8 +70,9 @@
 </ul>
 </div>
 
+
 <div id="profile_pic">
-<h2>Profile Picture</h2>
+<h2 class="heading2">Profile Picture</h2>
   <div>
     <h5><span style="color:blue">Using a picture hosted on github</h5>
     <img src ="https://github.com/AmandaCapobianco/cus1172_project1/blob/master/images/computergirlavatar.jpg?raw=true" height"200" width="200"/>
@@ -43,12 +84,13 @@
 </div>
 
 <div id="about_section">
-<h2>About Section</h2>
+<h2 class="heading2">About Section</h2>
 <p>Inquisitive and creative honors student with a strong foundation in problem solving, interested in software design and the implementation of preventative measures against cyber-attacks and advancing the protection of network infrastructure.</p>
 </div>
 
 <div id="education">
-<h2>Education</h2>
+<h2 class="heading2">Education</h2>
+<div class="box_table">
 <table>
   <tr align="center">
     <th> School </th>
@@ -62,9 +104,10 @@
   </tr>
 </table>
 </div>
+</div>
 
 <div id="work">
-<h2>Work Experience/Internships</h2>
+<h2 class="heading2">Work Experience/Internships</h2>
 <ul>
 <li><h3><span style="color:red">Website Creator/Manager</h3></li>
 <p>Selected to assist Dr. Ingrid D. Fray of St. John’s University Tobin School of Business to create a personal website and blog       for her students, while managing and delivering all tasks in adherence to tightly established deadlines. </p>
@@ -74,7 +117,7 @@
 </div>
 
 <div id="skills">
-<h2>Programming Skills</h2>
+<h2 class="heading2">Programming Skills</h2>
 <ul>
   <li>(Proficient) Java</li>
   <li>Python</li>
@@ -87,19 +130,19 @@
 </div>
 
 <div id="gen_interest">
-<h2>General Interest</h2>
+<h2 class="heading2">General Interest</h2>
 <p>I have a strong interest in outer space and would love the opportunity to apply my computer science and cybersecurity abilities in that direction. Technology has a major role in space research, and I've always been interested in having the chance to participate in the advancement of such technology, while also managing the security of those systems.</p>
 <p>Unrelated to my major, I have an interest in photography and art, which are also areas I'd love to invest more time into in the future. </p>
 </div>
 
 <div id="fav_mv">
-<h2>Favorite Musical Video</h2>
+<h2 class="heading2">Favorite Musical Video</h2>
   <iframe width="300" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameholder="0"></iframe>
 </div>
 
 <div id="fav_web">
-<h2>List of Favorite Websites</h2>
-<nav>
+<h2 class="heading2">List of Favorite Websites</h2>
+<nav id="nav_menu">
   <ol>
     <li> <a href="http://www.google.com"> Google </a></li>
     <li> <a href="https://www.stjohns.edu/"> SJU Homepage </a></li>
@@ -109,13 +152,13 @@
 </div>
 
 <div id="review">
-<h4>Review this Profile</h4>
-<form>
+<h2 class="heading2" style="text-align:center">Review this Profile!</h2>
+<form id="form_radio">
   <input type="radio" name="review" value="excellent" checked> Excellent<br>
   <input type="radio" name="review" value="good"> Good<br>
-  <input type="radio" name="review" value="bad">Bad
+  <input type="radio" name="review" value="bad"> Bad
 </form>
 </div>
-
+<p class="screen_only"> This is a random paragraph; and is not printed </p>
 </body>
 </html>
